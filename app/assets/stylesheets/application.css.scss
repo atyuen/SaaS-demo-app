@@ -32,6 +32,15 @@ html {
     border: none;
 }
 
+.navbar-default .navbar-brand, .navbar-default .navbar-nav > li > a {
+    color: white;
+}
+
+.navbar-default .navbar-brand:hover, .navbar-default .navbar-nav > li > a:hover {
+    color: white;
+    opacity: 0.7;
+}
+
 .homepage {
     color: white;
     margin-top: -20px;
