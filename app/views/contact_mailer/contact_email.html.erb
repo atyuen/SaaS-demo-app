@@ -2,8 +2,10 @@
 <html>
     <head></head>
     <body>
-        <p>You have received a message from the site's contact form, from
-        <%= "#{ @name }, at #{ @email }. Here is their message:" %></p>
-        <p>"<%= @body %>"</p>
+        <p>You have received a message from the site's contact form.</p>
+        <!--from < % = "#{ @name }, at #{ @email }. Here is their message:" % > -->
+        <p>Name: <%= @name %></p>
+        <p>Email: <%= @email %></p>
+        <p>Message: "<%= @body %>"</p>
     </body>
 </html>
