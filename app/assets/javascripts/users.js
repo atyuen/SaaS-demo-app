@@ -19,7 +19,7 @@ $(document).on('turbolinks:load', function() {
         var ccNum = $('#card_number').val(),
             cvvNum = $('#card_code').val(),
             expMonth = $('#card_month').val(),
-            expYear = $('card_year').val();
+            expYear = $('#card_year').val();
             
         // Use Stripe JS Library to check for card errors
         // error = true when there are errors
@@ -67,6 +67,6 @@ $(document).on('turbolinks:load', function() {
         proForm.append( $('<input type="hidden" name="user[stripe_card_token]">').val(token) );
         
         // Submit form to Rails App
-        proForm.get(0).sumbit();
+        proForm.get(0).submit();
     }
 });

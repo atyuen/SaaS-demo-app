@@ -5,4 +5,13 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :trackable, :validatable
          
   belongs_to :plan
+  
+  attr_accessor :stripe_card_token 
+  def save_and_subscribe
+    if valid?
+      customer = Stripe::Customer.create(description: email, plan: plan_id, source: stripe_card_token)
+      self.stripe_customer_token = customer.id
+      save!
+    end
+  end
 end
