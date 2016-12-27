@@ -1,5 +1,8 @@
+<%= image_tag @user.profile.avatar.url %>
+
 <%= @user.profile.first_name %>
-<%= @user.profile.last_name %>
+<%= @user.profile.last_name %> <br>
+
 <%= @user.profile.title %>
 
 <% if current_user.plan_id == 2 %>
