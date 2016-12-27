@@ -6,7 +6,7 @@ class ProfilesController < ApplicationController
         @profile = Profile.new
     end
     
-    # POST to /users/:user_id/profile
+    # POST to /users/:user_id/profiles
     def create
         # Ensure that we have the correct user filling out form
         @user = User.find( params[:user_id] )
