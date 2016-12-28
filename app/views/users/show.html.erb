@@ -6,22 +6,20 @@
         
         <div class="col-md-6">
             <h1><%= @user.profile.first_name %> <%= @user.profile.last_name %></h1>
-            
             <h3><span class="title-icon"><%= title_icon %></span><%= @user.profile.title %></h3>
             
-            <div class="well profile-block profile-description">
+            <div class="well profile-block profile-description text-block">
                 <h3>Description</h3>
-                <%= @user.profile.description %>
+                <p><%= @user.profile.description %></p>
             </div>
             
             <% if current_user.plan_id == 2 %>
-                <div class="well profile-block profile-contact-info">
+                <div class="well profile-block profile-contact-info text-block">
                     <h3>Contact Information</h3>
-                    <%= @user.profile.phone_number %> <br>
-                    <%= @user.profile.contact_email %> <br>
+                    <p><%= @user.profile.phone_number %></p>
+                    <p><%= @user.profile.contact_email %></p>
                 </div>
-            <% end %>
-            
+            <% end %> 
         </div>
     </div>
 </div>
