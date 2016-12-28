@@ -41,7 +41,7 @@ h1, h3, p {
 .navbar-default .navbar-nav > li > a {
     color: white;
     font-family: 'Roboto', sans-serif;
-    
+
     // This type of nesting elements only works in SASS
     &:hover {
         color: white;
